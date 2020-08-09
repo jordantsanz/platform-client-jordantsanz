@@ -1,16 +1,292 @@
+@import "~bootstrap/scss/bootstrap";
+
 body, html {
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, yellow 0%,green 40%,#05abe0 100%);
+  font-family: 'Do Hyeon', sans-serif;
+    background: #C0D6DF;
     height: 100%;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    text-decoration: none;
+    box-sizing: border-box;
   }
 
-.logo {
-    background-image: url('img/smile.jpg');
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  a, a:hover {
+    color: black;
+    text-decoration: none;
+    width: max-content;
+    height: max-content;
+  }
+
+  .new-navlink, .main-navlink{
+    font-size: 50px;
+    font-weight: bold;
+    transition: all ease 200ms;
+
+  }
+
+  .new-navlink:hover, .main-navlink:hover{
+    font-size: 55px;
+    color: #76c9ec;
+  }
+
+.postsPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-.active {
-  color: pink;
+
+
+.navbar{
+  background-color: #DD6E42;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  transition: 200ms ease all;
+}
+
+.postList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.post, .postSingle{
+  background-color: #EAEAEA;
+  border-radius: 5px;
+  width: fit-content;
+  height: 100%;
+  box-shadow:  0px 3px 5px 1px rgba(0,0,0,0.16), 2px 6px 9px 3px rgba(0,0,0,0.35);
+  transition: 200ms all ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  position: relative;
+}
+
+img{
+  box-shadow:  0px 3px 5px 1px rgba(0,0,0,0.16), 2px 2px 3px 2px rgba(0,0,0,0.35);
+  transition: 200ms ease all;
+}
+img:hover{
+  box-shadow:  0px 3px 6px 3px rgba(0,0,0,0.16), 2px 3px 4px 4px rgba(0,0,0,0.35);
+}
+
+.postSingle{
+  margin: 40px;
+}
+
+.post-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.post-icons{
+  justify-content: space-around;
+  display: flex;
+  width: 100px;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.icon{
+  width: 50px !important;
+  height: 50px !important;
+  transition: 200ms ease all;
+}
+
+.icon:hover{
+  color: #76c9ec;
+  cursor: pointer;
+}
+
+.postHolder{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px;
+}
+
+.post-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title{
+  font-size: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+.coverURL{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.tags{
+  font-style: italic;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.content{
+  font-size: 35px;
+  margin: 20px;
+}
+
+.newNotePage{
+  background-color: #9CA496;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  height: 110%;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.NewNoteText, .instructions{
+  font-size: 40px;
+
+}
+
+#inputText{
+  height: 80px;
+}
+
+.post:hover{
+  background-color: #E3A47A;
+  box-shadow:  0px 7px 9px 5px rgba(0,0,0,0.16), 4px 8px 11px 5px rgba(0,0,0,0.35);
+  animation-duration: 1.5s;
+  animation-name: changeBackground;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes changeBackground{
+  0%{
+    background-color: white;
+  }
+  50%{
+    background-color: #E3A47A
+  }
+  100%{
+    background-color: white;
+  }
+}
+
+#post-specific:hover.postSingle{
+  background-color: white;
+  box-shadow:  0px 7px 9px 5px rgba(0,0,0,0.16), 4px 8px 11px 5px rgba(0,0,0,0.35);
+}
+
+.post-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-title-header{
+  margin: 5px;
+  color: black;
+  font-weight: 30px;
+}
+
+
+.error-message{
+  color: rgb(163, 9, 9);
+}
+
+.input-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+
+input, .input{
+  width: 75%;
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 40px;
+  transition: 200ms all ease;
+  outline: none;
+  border: white 2px solid;
+  font-family: 'Do Hyeon', sans-serif;
+  color: #4F6D7A;
+  border-radius: 8px;
+}
+
+.input{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#inputTitle{
+  font-size: 30px;
+  transition: 200ms ease all;
+}
+
+input:hover{
+  background-color: #E3A47A;
+}
+
+input:focus, .input:focus{
+  background-color: #C0D6DF;
+}
+
+#filled{
+  color: #f79f64;
+  transition: 200ms all ease;
+  font-size: 55px;
+  animation-name: changeText;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeText{
+  0%{
+    color: #f79f64;
+  }
+  50%{
+    color: #EAEAEA;
+  }
+  100%{
+    color: #f79f64;
+  }
+}
+
+#inputUrl{
+  margin-bottom: 10px;
 }

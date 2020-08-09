@@ -1,11 +1,13 @@
 // the starting point for your redux store
 // this defines what your store state will look like
 import { combineReducers } from 'redux';
+import errorsReducer from './errorsReducer';
 
-import CountReducer from './count-reducer';
+import postsReducer from './postsReducer';
 
 const rootReducer = combineReducers({
-  count: CountReducer,
+  posts: postsReducer,
+  errors: errorsReducer,
 });
 
 export default rootReducer;
