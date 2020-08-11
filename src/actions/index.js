@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT_URL = 'https://jordantsanz-lab5.herokuapp.com';
+const ROOT_URL = 'https://jordantsanz-lab5.herokuapp.com/api';
 // const API_KEY = '?key=jsanz';
 
 export const ActionTypes = {
