@@ -80,14 +80,12 @@ class Post extends Component {
       coverUrl: this.state.coverUrl,
       tags: this.state.tags,
     };
-    this.props.updatePost(post, this.props.history);
-    this.props.fetchPost(this.props.currentPost.id);
+    this.props.updatePost(post, this.props.history, this.switchUpdate);
+  }
+
+  switchUpdate = () => {
     this.setState({
       isUpdating: false,
-      title: '',
-      content: '',
-      coverUrl: '',
-      tags: '',
     });
   }
 
@@ -131,6 +129,8 @@ class Post extends Component {
   }
 
   render() {
+    console.log(this.props.currentPost);
+    console.log(this.state.isUpdating);
     return (
       <div className="postHolder">{this.renderUpdating()}</div>
     );
