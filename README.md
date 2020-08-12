@@ -4,21 +4,7 @@
 
 [deployed url](http://jordantsanz-cs52-blog.surge.sh/)
 
-## What Worked Well
-
-The react and redux combination was very useful. Once I understood how it worked, it was very simple to make things happen from there. 
-
-## What Didn't
-
-It was difficult to work on just the front-end at a time without thinking about the back-end, as I wasn't sure which things could happen without others.
-
-## Extra Credit
-
-* There is an error-handling reducer through redux!
-* There is input validation to make sure that each input field is filled before making a new note
-* There's a lot of CSS animation and hover effects!
-  * my favorite is when you make a new note, if the input field is filled, the title lights up!
-
+This website was created with a react-redux data flow, and now incorperates a back-end database using MongoDB and a server with express.js. This website features functionality such as creating and deleting posts, as well as editing posts. You can see the entire list of all posts, and click one to be routed to that specific post's page.
 
 ## Screenshots
 
